@@ -3,8 +3,8 @@ using namespace std;
 
 void HashTable::insert(int ID, int placeholder) {
 	Data toInsert(placeholder);
-	int countryID = ID / 10000;
-	int dateID = ID % 10000;
+	unsigned int countryID = ID / 10000;
+	unsigned int dateID = ID % 10000;
 	if (table.size() <= countryID) {
 		table.resize(countryID + 1);
 	}

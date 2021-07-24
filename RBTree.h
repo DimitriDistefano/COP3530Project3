@@ -31,6 +31,7 @@ public:
 	Node* insertID(int ID, Data data, Node* currNode);
 	Node* searchID(int ID, Node* root);
 	//IDs should be in the form ccdddd, where cc is a 2 digit country ID and dddd is a 4 digit date ID
+	//Change placeholder for whatever Data needs
 	Node* insert(int ID, int placeholder);
 	Data search(int ID);
 
