@@ -9,6 +9,8 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	void start();
+
 
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
@@ -16,7 +18,7 @@ namespace CppCLRWinformsProjekt {
 		Form1(void)
 		{
 			InitializeComponent();
-
+			start();
 		}
 
 	protected:
@@ -90,6 +92,11 @@ namespace CppCLRWinformsProjekt {
 		}
 #pragma endregion
 
+	void start() {
+		
+	}
+
+
 	void Test1(Button^ button1) {
 		button1->Text = "Yo";
 	}
@@ -102,13 +109,6 @@ namespace CppCLRWinformsProjekt {
 	}
 
 	};
-
-
-
-
-
-
-
 
 }
 

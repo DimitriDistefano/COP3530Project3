@@ -29,6 +29,15 @@
     <ClInclude Include="Form1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RBTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCLR_WinformsProjekt.cpp">
@@ -41,6 +50,9 @@
       <Filter>CPP files</Filter>
     </ClCompile>
     <ClCompile Include="Form1.cpp">
+      <Filter>CPP files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>CPP files</Filter>
     </ClCompile>
   </ItemGroup>
