@@ -14,6 +14,7 @@ int main() {
 		cin >> input;
 		if (input == "insert") {
 			cin >> input;
+			//Just placeholder data, change later
 			table.insert(stoi(input), stoi(input));
 			tree.insert(stoi(input), stoi(input));
 		}
