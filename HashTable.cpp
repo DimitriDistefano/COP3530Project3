@@ -1,7 +1,8 @@
 #include "HashTable.h"
 using namespace std;
 
-void HashTable::insert(int ID, int data) {
+void HashTable::insert(int ID, int placeholder) {
+	Data toInsert(placeholder);
 	int countryID = ID / 10000;
 	int dateID = ID % 10000;
 	if (table.size() <= countryID) {
@@ -10,10 +11,10 @@ void HashTable::insert(int ID, int data) {
 	if (table[countryID].size() <= dateID) {
 		table[countryID].resize(dateID + 1);
 	}
-	table[countryID][dateID] = data;
+	table[countryID][dateID] = toInsert;
 }
 
-int HashTable::search(int ID) {
+Data HashTable::search(int ID) {
 	int countryID = ID / 10000;
 	int dateID = ID % 10000;
 	return table[countryID][dateID];

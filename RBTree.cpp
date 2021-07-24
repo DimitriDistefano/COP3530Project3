@@ -2,14 +2,11 @@
 
 RBTree::Node::Node() {
 	ID = -1;
-	parent = nullptr;
-	isRed = true;
 }
 
-RBTree::Node::Node(int ID) {
+RBTree::Node::Node(int ID, Data data) {
 	this->ID = ID;
-	parent = nullptr;
-	isRed = true;
+	this->data = data;
 }
 
 void RBTree::rotateLeft(Node* curr) {
@@ -79,18 +76,18 @@ void RBTree::rotateRightRight(Node* curr) {
 	rotateLeft(grandparent);
 }
 
-RBTree::Node* RBTree::insertID(int ID, Node* curr) {
+RBTree::Node* RBTree::insertID(int ID, Data data, Node* curr) {
 	if (!curr) {
-		return new Node(ID);
+		return new Node(ID, data);
 	}
 
 	else if (ID < curr->ID) {
-		curr->left = insertID(ID, curr->left);
+		curr->left = insertID(ID, data, curr->left);
 		curr->left->parent = curr;
 	}
 
 	else if (ID > curr->ID) {
-		curr->right = insertID(ID, curr->right);
+		curr->right = insertID(ID, data, curr->right);
 		curr->right->parent = curr;
 	}
 
@@ -157,15 +154,16 @@ void RBTree::balanceNodes(Node* curr) {
 	root->isRed = false;
 }
 
-RBTree::Node* RBTree::insert(int ID) {
-	root = insertID(ID, root);
+RBTree::Node* RBTree::insert(int ID, int placeholder) {
+	Data toInsert(placeholder);
+	root = insertID(ID, toInsert, root);
 	Node* start = searchID(ID, root);
 	balanceNodes(start);
 	return root;
 }
 
-RBTree::Node* RBTree::search(int ID) {
-	return searchID(ID, root);
+Data RBTree::search(int ID) {
+	return searchID(ID, root)->data;
 }
 
 void RBTree::debug_printInorder(Node* root) {
