@@ -28,8 +28,11 @@ private:
 public:
 	Node* insertID(int ID, Node* currNode);
 	Node* searchID(int ID, Node* root);
-	Node* insertRB(int ID);
+	//IDs should be in the form ccdddd, where cc is a 2 digit country ID and dddd is a 4 digit date ID
+	Node* insert(int ID);
+	Node* search(int ID);
 
-	void printInorder(Node* root);
-	void printPreorder(Node* root);
+
+	void debug_printInorder(Node* root);
+	void debug_printPreorder(Node* root);
 };

@@ -157,29 +157,33 @@ void RBTree::balanceNodes(Node* curr) {
 	root->isRed = false;
 }
 
-RBTree::Node* RBTree::insertRB(int ID) {
+RBTree::Node* RBTree::insert(int ID) {
 	root = insertID(ID, root);
 	Node* start = searchID(ID, root);
 	balanceNodes(start);
 	return root;
 }
 
-void RBTree::printInorder(Node* root) {
-	if (!root) {
-		return;
-	}
-	printInorder(root->left);
-	cout << root->ID << " ";
-	if (root->isRed) {
-		cout << "red" << " ";
-	}
-	else {
-		cout << "black" << " ";
-	}
-	printInorder(root->right);
+RBTree::Node* RBTree::search(int ID) {
+	return searchID(ID, root);
 }
 
-void RBTree::printPreorder(Node* root) {
+void RBTree::debug_printInorder(Node* root) {
+	if (!root) {
+		return;
+	}
+	debug_printInorder(root->left);
+	cout << root->ID << " ";
+	if (root->isRed) {
+		cout << "red" << " ";
+	}
+	else {
+		cout << "black" << " ";
+	}
+	debug_printInorder(root->right);
+}
+
+void RBTree::debug_printPreorder(Node* root) {
 	if (!root) {
 		return;
 	}
@@ -190,6 +194,6 @@ void RBTree::printPreorder(Node* root) {
 	else {
 		cout << "black" << " ";
 	}
-	printPreorder(root->left);
-	printPreorder(root->right);
+	debug_printPreorder(root->left);
+	debug_printPreorder(root->right);
 }
