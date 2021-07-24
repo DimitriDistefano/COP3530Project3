@@ -4,6 +4,7 @@ using namespace std;
 
 class Data
 {
+	//Just placeholder values, add whatever values are needed
 	int placeholder;
 
 public:
