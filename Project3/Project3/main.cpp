@@ -1,10 +1,11 @@
+#include "pch.h"
 #include <iostream>
 #include <string>
 #include "HashTable.h"
 #include "RBTree.h"
 using namespace std;
 
-int main() {
+int main2() {
 	RBTree tree;
 	HashTable table;
 	string input;
@@ -32,4 +33,5 @@ int main() {
 			tree.search(stoi(input)).printData();
 		}
 	}
+	return 0;
 }
