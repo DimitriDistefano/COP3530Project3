@@ -13,8 +13,6 @@ namespace CppCLRWinformsProject {
 	using namespace System::Drawing;
 
 
-	string countries[];
-
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
@@ -23,7 +21,7 @@ namespace CppCLRWinformsProject {
 			InitializeComponent();
 	
 		}
-
+#pragma region Windows Form Designer generated code
 	protected:
 
 		~Form1()
@@ -146,7 +144,7 @@ namespace CppCLRWinformsProject {
 
 		System::ComponentModel::Container^ components;
 
-#pragma region Windows Form Designer generated code
+
 
 		void InitializeComponent(void)
 		{
@@ -238,9 +236,11 @@ namespace CppCLRWinformsProject {
 			// btnCalculate
 			// 
 			this->btnCalculate->BackColor = System::Drawing::SystemColors::Control;
-			this->btnCalculate->Location = System::Drawing::Point(17, 406);
+			this->btnCalculate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnCalculate->Location = System::Drawing::Point(181, 386);
 			this->btnCalculate->Name = L"btnCalculate";
-			this->btnCalculate->Size = System::Drawing::Size(112, 41);
+			this->btnCalculate->Size = System::Drawing::Size(148, 62);
 			this->btnCalculate->TabIndex = 0;
 			this->btnCalculate->Text = L"Calculate";
 			this->btnCalculate->UseVisualStyleBackColor = false;
@@ -487,121 +487,121 @@ namespace CppCLRWinformsProject {
 			// 
 			// canada3
 			// 
-			this->canada3->Location = System::Drawing::Point(311, 259);
+			this->canada3->Location = System::Drawing::Point(317, 259);
 			this->canada3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->canada3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->canada3->Name = L"canada3";
-			this->canada3->Size = System::Drawing::Size(135, 20);
+			this->canada3->Size = System::Drawing::Size(140, 20);
 			this->canada3->TabIndex = 37;
 			this->canada3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// indonesia3
 			// 
-			this->indonesia3->Location = System::Drawing::Point(311, 236);
+			this->indonesia3->Location = System::Drawing::Point(317, 236);
 			this->indonesia3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->indonesia3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->indonesia3->Name = L"indonesia3";
-			this->indonesia3->Size = System::Drawing::Size(135, 20);
+			this->indonesia3->Size = System::Drawing::Size(140, 20);
 			this->indonesia3->TabIndex = 36;
 			this->indonesia3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// saudi3
 			// 
-			this->saudi3->Location = System::Drawing::Point(311, 214);
+			this->saudi3->Location = System::Drawing::Point(317, 214);
 			this->saudi3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->saudi3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->saudi3->Name = L"saudi3";
-			this->saudi3->Size = System::Drawing::Size(135, 20);
+			this->saudi3->Size = System::Drawing::Size(140, 20);
 			this->saudi3->TabIndex = 35;
 			this->saudi3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// skorea3
 			// 
-			this->skorea3->Location = System::Drawing::Point(311, 191);
+			this->skorea3->Location = System::Drawing::Point(317, 191);
 			this->skorea3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->skorea3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->skorea3->Name = L"skorea3";
-			this->skorea3->Size = System::Drawing::Size(135, 20);
+			this->skorea3->Size = System::Drawing::Size(140, 20);
 			this->skorea3->TabIndex = 34;
 			this->skorea3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// iran3
 			// 
-			this->iran3->Location = System::Drawing::Point(311, 168);
+			this->iran3->Location = System::Drawing::Point(317, 168);
 			this->iran3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->iran3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->iran3->Name = L"iran3";
-			this->iran3->Size = System::Drawing::Size(135, 20);
+			this->iran3->Size = System::Drawing::Size(140, 20);
 			this->iran3->TabIndex = 33;
 			this->iran3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// mexico3
 			// 
-			this->mexico3->Location = System::Drawing::Point(311, 281);
+			this->mexico3->Location = System::Drawing::Point(317, 281);
 			this->mexico3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->mexico3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->mexico3->Name = L"mexico3";
-			this->mexico3->Size = System::Drawing::Size(135, 20);
+			this->mexico3->Size = System::Drawing::Size(140, 20);
 			this->mexico3->TabIndex = 32;
 			this->mexico3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// germany3
 			// 
-			this->germany3->Location = System::Drawing::Point(311, 145);
+			this->germany3->Location = System::Drawing::Point(317, 145);
 			this->germany3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->germany3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->germany3->Name = L"germany3";
-			this->germany3->Size = System::Drawing::Size(135, 20);
+			this->germany3->Size = System::Drawing::Size(140, 20);
 			this->germany3->TabIndex = 31;
 			this->germany3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// japan3
 			// 
-			this->japan3->Location = System::Drawing::Point(311, 123);
+			this->japan3->Location = System::Drawing::Point(317, 123);
 			this->japan3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->japan3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->japan3->Name = L"japan3";
-			this->japan3->Size = System::Drawing::Size(135, 20);
+			this->japan3->Size = System::Drawing::Size(140, 20);
 			this->japan3->TabIndex = 30;
 			this->japan3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// russia3
 			// 
-			this->russia3->Location = System::Drawing::Point(311, 101);
+			this->russia3->Location = System::Drawing::Point(317, 101);
 			this->russia3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->russia3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->russia3->Name = L"russia3";
-			this->russia3->Size = System::Drawing::Size(135, 20);
+			this->russia3->Size = System::Drawing::Size(140, 20);
 			this->russia3->TabIndex = 29;
 			this->russia3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// india3
 			// 
-			this->india3->Location = System::Drawing::Point(311, 78);
+			this->india3->Location = System::Drawing::Point(317, 78);
 			this->india3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->india3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->india3->Name = L"india3";
-			this->india3->Size = System::Drawing::Size(135, 20);
+			this->india3->Size = System::Drawing::Size(140, 20);
 			this->india3->TabIndex = 28;
 			this->india3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// china3
 			// 
-			this->china3->Location = System::Drawing::Point(311, 31);
+			this->china3->Location = System::Drawing::Point(317, 31);
 			this->china3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->china3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->china3->Name = L"china3";
-			this->china3->Size = System::Drawing::Size(135, 20);
+			this->china3->Size = System::Drawing::Size(140, 20);
 			this->china3->TabIndex = 27;
 			this->china3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// usa3
 			// 
-			this->usa3->Location = System::Drawing::Point(311, 55);
+			this->usa3->Location = System::Drawing::Point(317, 55);
 			this->usa3->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->usa3->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->usa3->Name = L"usa3";
-			this->usa3->Size = System::Drawing::Size(135, 20);
+			this->usa3->Size = System::Drawing::Size(140, 20);
 			this->usa3->TabIndex = 26;
 			this->usa3->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
@@ -617,7 +617,7 @@ namespace CppCLRWinformsProject {
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(308, 9);
+			this->label15->Location = System::Drawing::Point(314, 9);
 			this->label15->Name = L"label15";
 			this->label15->Size = System::Drawing::Size(151, 13);
 			this->label15->TabIndex = 39;
@@ -628,8 +628,9 @@ namespace CppCLRWinformsProject {
 			this->canada1->Location = System::Drawing::Point(84, 259);
 			this->canada1->Name = L"canada1";
 			this->canada1->ReadOnly = true;
-			this->canada1->Size = System::Drawing::Size(115, 20);
+			this->canada1->Size = System::Drawing::Size(105, 20);
 			this->canada1->TabIndex = 51;
+			this->canada1->Text = L"0.56GT";
 			this->canada1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// indonesia1
@@ -637,8 +638,9 @@ namespace CppCLRWinformsProject {
 			this->indonesia1->Location = System::Drawing::Point(84, 236);
 			this->indonesia1->Name = L"indonesia1";
 			this->indonesia1->ReadOnly = true;
-			this->indonesia1->Size = System::Drawing::Size(115, 20);
+			this->indonesia1->Size = System::Drawing::Size(105, 20);
 			this->indonesia1->TabIndex = 50;
+			this->indonesia1->Text = L"0.61GT";
 			this->indonesia1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// saudi1
@@ -646,8 +648,9 @@ namespace CppCLRWinformsProject {
 			this->saudi1->Location = System::Drawing::Point(84, 214);
 			this->saudi1->Name = L"saudi1";
 			this->saudi1->ReadOnly = true;
-			this->saudi1->Size = System::Drawing::Size(115, 20);
+			this->saudi1->Size = System::Drawing::Size(105, 20);
 			this->saudi1->TabIndex = 49;
+			this->saudi1->Text = L"0.62GT";
 			this->saudi1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// skorea1
@@ -655,8 +658,9 @@ namespace CppCLRWinformsProject {
 			this->skorea1->Location = System::Drawing::Point(84, 191);
 			this->skorea1->Name = L"skorea1";
 			this->skorea1->ReadOnly = true;
-			this->skorea1->Size = System::Drawing::Size(115, 20);
+			this->skorea1->Size = System::Drawing::Size(105, 20);
 			this->skorea1->TabIndex = 48;
+			this->skorea1->Text = L"0.65GT";
 			this->skorea1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// iran1
@@ -664,8 +668,9 @@ namespace CppCLRWinformsProject {
 			this->iran1->Location = System::Drawing::Point(84, 168);
 			this->iran1->Name = L"iran1";
 			this->iran1->ReadOnly = true;
-			this->iran1->Size = System::Drawing::Size(115, 20);
+			this->iran1->Size = System::Drawing::Size(105, 20);
 			this->iran1->TabIndex = 47;
+			this->iran1->Text = L"0.72GT";
 			this->iran1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// mexico1
@@ -673,8 +678,9 @@ namespace CppCLRWinformsProject {
 			this->mexico1->Location = System::Drawing::Point(84, 281);
 			this->mexico1->Name = L"mexico1";
 			this->mexico1->ReadOnly = true;
-			this->mexico1->Size = System::Drawing::Size(115, 20);
+			this->mexico1->Size = System::Drawing::Size(105, 20);
 			this->mexico1->TabIndex = 46;
+			this->mexico1->Text = L"0.47GT";
 			this->mexico1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// germany1
@@ -682,8 +688,9 @@ namespace CppCLRWinformsProject {
 			this->germany1->Location = System::Drawing::Point(84, 145);
 			this->germany1->Name = L"germany1";
 			this->germany1->ReadOnly = true;
-			this->germany1->Size = System::Drawing::Size(115, 20);
+			this->germany1->Size = System::Drawing::Size(105, 20);
 			this->germany1->TabIndex = 45;
+			this->germany1->Text = L"0.75GT";
 			this->germany1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// japan1
@@ -691,8 +698,9 @@ namespace CppCLRWinformsProject {
 			this->japan1->Location = System::Drawing::Point(84, 123);
 			this->japan1->Name = L"japan1";
 			this->japan1->ReadOnly = true;
-			this->japan1->Size = System::Drawing::Size(115, 20);
+			this->japan1->Size = System::Drawing::Size(105, 20);
 			this->japan1->TabIndex = 44;
+			this->japan1->Text = L"1.16GT";
 			this->japan1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// russia1
@@ -700,8 +708,9 @@ namespace CppCLRWinformsProject {
 			this->russia1->Location = System::Drawing::Point(84, 101);
 			this->russia1->Name = L"russia1";
 			this->russia1->ReadOnly = true;
-			this->russia1->Size = System::Drawing::Size(115, 20);
+			this->russia1->Size = System::Drawing::Size(105, 20);
 			this->russia1->TabIndex = 43;
+			this->russia1->Text = L"1.71GT";
 			this->russia1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// india1
@@ -709,8 +718,9 @@ namespace CppCLRWinformsProject {
 			this->india1->Location = System::Drawing::Point(84, 78);
 			this->india1->Name = L"india1";
 			this->india1->ReadOnly = true;
-			this->india1->Size = System::Drawing::Size(115, 20);
+			this->india1->Size = System::Drawing::Size(105, 20);
 			this->india1->TabIndex = 42;
+			this->india1->Text = L"2.65GT";
 			this->india1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// china1
@@ -718,8 +728,9 @@ namespace CppCLRWinformsProject {
 			this->china1->Location = System::Drawing::Point(84, 31);
 			this->china1->Name = L"china1";
 			this->china1->ReadOnly = true;
-			this->china1->Size = System::Drawing::Size(115, 20);
+			this->china1->Size = System::Drawing::Size(105, 20);
 			this->china1->TabIndex = 41;
+			this->china1->Text = L"10.06GT";
 			this->china1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// usa1
@@ -727,8 +738,9 @@ namespace CppCLRWinformsProject {
 			this->usa1->Location = System::Drawing::Point(84, 55);
 			this->usa1->Name = L"usa1";
 			this->usa1->ReadOnly = true;
-			this->usa1->Size = System::Drawing::Size(115, 20);
+			this->usa1->Size = System::Drawing::Size(105, 20);
 			this->usa1->TabIndex = 40;
+			this->usa1->Text = L"5.41GT";
 			this->usa1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// label16
@@ -743,7 +755,7 @@ namespace CppCLRWinformsProject {
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(12, 343);
+			this->label17->Location = System::Drawing::Point(109, 321);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(149, 13);
 			this->label17->TabIndex = 53;
@@ -751,28 +763,30 @@ namespace CppCLRWinformsProject {
 			// 
 			// allemission
 			// 
-			this->allemission->Location = System::Drawing::Point(167, 340);
+			this->allemission->Location = System::Drawing::Point(264, 319);
 			this->allemission->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->allemission->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->allemission->Name = L"allemission";
 			this->allemission->Size = System::Drawing::Size(100, 20);
 			this->allemission->TabIndex = 54;
+			this->allemission->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->allemission->TextChanged += gcnew System::EventHandler(this, &Form1::allemission_TextChanged);
 			// 
 			// allpopulation
 			// 
-			this->allpopulation->Location = System::Drawing::Point(167, 365);
+			this->allpopulation->Location = System::Drawing::Point(264, 345);
 			this->allpopulation->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->allpopulation->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->allpopulation->Name = L"allpopulation";
 			this->allpopulation->Size = System::Drawing::Size(100, 20);
 			this->allpopulation->TabIndex = 56;
+			this->allpopulation->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			this->allpopulation->ValueChanged += gcnew System::EventHandler(this, &Form1::allpopulation_ValueChanged);
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(12, 368);
+			this->label18->Location = System::Drawing::Point(100, 347);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(158, 13);
 			this->label18->TabIndex = 55;
@@ -876,13 +890,38 @@ namespace CppCLRWinformsProject {
 
 #pragma endregion
 
-	void Calculate(Button^ button1) {
-		button1->Text = "Yo";
+	void loadValues(double emission, int emissionMultiplier, int popMuliplier) {
+		
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		Calculate(this->btnCalculate);
+
+		loadValues(System::Convert::ToDouble(this->china1->Text->Substring(0, this->china1->Text->Length - 2)), System::Convert::ToInt32(this->china2->Value), System::Convert::ToInt32(this->china3->Value));
+
+		loadValues(System::Convert::ToDouble(this->usa1->Text->Substring(0, this->usa1->Text->Length-2)), System::Convert::ToInt32(this->usa2->Value), System::Convert::ToInt32(this->usa3->Value));
+
+		loadValues(System::Convert::ToDouble(this->india1->Text->Substring(0, this->india1->Text->Length-2)), System::Convert::ToInt32(this->india2->Value), System::Convert::ToInt32(this->india3->Value));
+
+		loadValues(System::Convert::ToDouble(this->russia1->Text->Substring(0, this->russia1->Text->Length - 2)), System::Convert::ToInt32(this->russia2->Value), System::Convert::ToInt32(this->russia3->Value));
+
+		loadValues(System::Convert::ToDouble(this->japan1->Text->Substring(0, this->japan1->Text->Length - 2)), System::Convert::ToInt32(this->japan2->Value), System::Convert::ToInt32(this->japan3->Value));
+
+		loadValues(System::Convert::ToDouble(this->germany1->Text->Substring(0, this->germany1->Text->Length - 2)), System::Convert::ToInt32(this->germany2->Value), System::Convert::ToInt32(this->germany3->Value));
+
+		loadValues(System::Convert::ToDouble(this->iran1->Text->Substring(0, this->iran1->Text->Length - 2)), System::Convert::ToInt32(this->iran2->Value), System::Convert::ToInt32(this->iran3->Value));
+
+		loadValues(System::Convert::ToDouble(this->skorea1->Text->Substring(0, this->skorea1->Text->Length - 2)), System::Convert::ToInt32(this->skorea2->Value), System::Convert::ToInt32(this->skorea3->Value));
+
+		loadValues(System::Convert::ToDouble(this->saudi1->Text->Substring(0, this->saudi1->Text->Length - 2)), System::Convert::ToInt32(this->saudi2->Value), System::Convert::ToInt32(this->saudi3->Value));
+
+		loadValues(System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToInt32(this->indonesia2->Value), System::Convert::ToInt32(this->indonesia3->Value));
+
+		loadValues(System::Convert::ToDouble(this->canada1->Text->Substring(0, this->canada1->Text->Length - 2)), System::Convert::ToInt32(this->canada2->Value), System::Convert::ToInt32(this->canada3->Value));
+
+		loadValues(System::Convert::ToDouble(this->mexico1->Text->Substring(0, this->mexico1->Text->Length - 2)), System::Convert::ToInt32(this->mexico2->Value), System::Convert::ToInt32(this->mexico3->Value));
+	
 	}
+
 	private: System::Void allemission_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 		this->usa2->Value = this->allemission->Value;
 		this->russia2->Value = this->allemission->Value;
@@ -916,8 +955,6 @@ namespace CppCLRWinformsProject {
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 
 	}
-
-
 };
 };
 
