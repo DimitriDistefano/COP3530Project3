@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include "HashTable.h"
+#include "RBTree.h"
 
 using namespace std;
 
@@ -12,6 +14,7 @@ namespace CppCLRWinformsProject {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+	void loadValues(double emission, double emissionMultiplier, double popMultiplier);
 
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
@@ -19,7 +22,7 @@ namespace CppCLRWinformsProject {
 		Form1(void)
 		{
 			InitializeComponent();
-	
+
 		}
 #pragma region Windows Form Designer generated code
 	protected:
@@ -136,6 +139,7 @@ namespace CppCLRWinformsProject {
 
 
 	private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Label^ label1;
 
 
 	protected:
@@ -205,6 +209,7 @@ namespace CppCLRWinformsProject {
 			this->allemission = (gcnew System::Windows::Forms::NumericUpDown());
 			this->allpopulation = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->usa2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->china2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->india2))->BeginInit();
@@ -238,7 +243,7 @@ namespace CppCLRWinformsProject {
 			this->btnCalculate->BackColor = System::Drawing::SystemColors::Control;
 			this->btnCalculate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCalculate->Location = System::Drawing::Point(181, 386);
+			this->btnCalculate->Location = System::Drawing::Point(177, 381);
 			this->btnCalculate->Name = L"btnCalculate";
 			this->btnCalculate->Size = System::Drawing::Size(148, 62);
 			this->btnCalculate->TabIndex = 0;
@@ -263,9 +268,9 @@ namespace CppCLRWinformsProject {
 				static_cast<System::Byte>(0)));
 			this->extinctionLabel->Location = System::Drawing::Point(12, 464);
 			this->extinctionLabel->Name = L"extinctionLabel";
-			this->extinctionLabel->Size = System::Drawing::Size(526, 25);
+			this->extinctionLabel->Size = System::Drawing::Size(559, 25);
 			this->extinctionLabel->TabIndex = 2;
-			this->extinctionLabel->Text = L"The Human Species will reach mass extinction in 300 years";
+			this->extinctionLabel->Text = L"The Human Species will reach mass extinction in the year 2222";
 			// 
 			// label2
 			// 
@@ -755,7 +760,7 @@ namespace CppCLRWinformsProject {
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(109, 321);
+			this->label17->Location = System::Drawing::Point(22, 318);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(149, 13);
 			this->label17->TabIndex = 53;
@@ -763,7 +768,7 @@ namespace CppCLRWinformsProject {
 			// 
 			// allemission
 			// 
-			this->allemission->Location = System::Drawing::Point(264, 319);
+			this->allemission->Location = System::Drawing::Point(177, 316);
 			this->allemission->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->allemission->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->allemission->Name = L"allemission";
@@ -774,7 +779,7 @@ namespace CppCLRWinformsProject {
 			// 
 			// allpopulation
 			// 
-			this->allpopulation->Location = System::Drawing::Point(264, 345);
+			this->allpopulation->Location = System::Drawing::Point(177, 342);
 			this->allpopulation->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, 0 });
 			this->allpopulation->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1000, 0, 0, System::Int32::MinValue });
 			this->allpopulation->Name = L"allpopulation";
@@ -786,17 +791,27 @@ namespace CppCLRWinformsProject {
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(100, 347);
+			this->label18->Location = System::Drawing::Point(13, 344);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(158, 13);
 			this->label18->TabIndex = 55;
 			this->label18->Text = L"Change All Population Increase:";
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(297, 323);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(126, 13);
+			this->label1->TabIndex = 57;
+			this->label1->Text = L"Total CO2 Worldwide: 33";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(783, 498);
+			this->ClientSize = System::Drawing::Size(799, 498);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->allpopulation);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->allemission);
@@ -890,36 +905,36 @@ namespace CppCLRWinformsProject {
 
 #pragma endregion
 
-	void loadValues(double emission, int emissionMultiplier, int popMuliplier) {
-		
-	}
+
+
+
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		loadValues(System::Convert::ToDouble(this->china1->Text->Substring(0, this->china1->Text->Length - 2)), System::Convert::ToInt32(this->china2->Value), System::Convert::ToInt32(this->china3->Value));
+		loadValues(System::Convert::ToDouble(this->china1->Text->Substring(0, this->china1->Text->Length - 2)), System::Convert::ToDouble(this->china2->Value), System::Convert::ToDouble(this->china3->Value));
 
-		loadValues(System::Convert::ToDouble(this->usa1->Text->Substring(0, this->usa1->Text->Length-2)), System::Convert::ToInt32(this->usa2->Value), System::Convert::ToInt32(this->usa3->Value));
+		loadValues(System::Convert::ToDouble(this->usa1->Text->Substring(0, this->usa1->Text->Length - 2)), System::Convert::ToDouble(this->usa2->Value), System::Convert::ToDouble(this->usa3->Value));
 
-		loadValues(System::Convert::ToDouble(this->india1->Text->Substring(0, this->india1->Text->Length-2)), System::Convert::ToInt32(this->india2->Value), System::Convert::ToInt32(this->india3->Value));
+		loadValues(System::Convert::ToDouble(this->india1->Text->Substring(0, this->india1->Text->Length - 2)), System::Convert::ToDouble(this->india2->Value), System::Convert::ToDouble(this->india3->Value));
 
-		loadValues(System::Convert::ToDouble(this->russia1->Text->Substring(0, this->russia1->Text->Length - 2)), System::Convert::ToInt32(this->russia2->Value), System::Convert::ToInt32(this->russia3->Value));
+		loadValues(System::Convert::ToDouble(this->russia1->Text->Substring(0, this->russia1->Text->Length - 2)), System::Convert::ToDouble(this->russia2->Value), System::Convert::ToDouble(this->russia3->Value));
 
-		loadValues(System::Convert::ToDouble(this->japan1->Text->Substring(0, this->japan1->Text->Length - 2)), System::Convert::ToInt32(this->japan2->Value), System::Convert::ToInt32(this->japan3->Value));
+		loadValues(System::Convert::ToDouble(this->japan1->Text->Substring(0, this->japan1->Text->Length - 2)), System::Convert::ToDouble(this->japan2->Value), System::Convert::ToDouble(this->japan3->Value));
 
-		loadValues(System::Convert::ToDouble(this->germany1->Text->Substring(0, this->germany1->Text->Length - 2)), System::Convert::ToInt32(this->germany2->Value), System::Convert::ToInt32(this->germany3->Value));
+		loadValues(System::Convert::ToDouble(this->germany1->Text->Substring(0, this->germany1->Text->Length - 2)), System::Convert::ToDouble(this->germany2->Value), System::Convert::ToDouble(this->germany3->Value));
 
-		loadValues(System::Convert::ToDouble(this->iran1->Text->Substring(0, this->iran1->Text->Length - 2)), System::Convert::ToInt32(this->iran2->Value), System::Convert::ToInt32(this->iran3->Value));
+		loadValues(System::Convert::ToDouble(this->iran1->Text->Substring(0, this->iran1->Text->Length - 2)), System::Convert::ToDouble(this->iran2->Value), System::Convert::ToDouble(this->iran3->Value));
 
-		loadValues(System::Convert::ToDouble(this->skorea1->Text->Substring(0, this->skorea1->Text->Length - 2)), System::Convert::ToInt32(this->skorea2->Value), System::Convert::ToInt32(this->skorea3->Value));
+		loadValues(System::Convert::ToDouble(this->skorea1->Text->Substring(0, this->skorea1->Text->Length - 2)), System::Convert::ToDouble(this->skorea2->Value), System::Convert::ToDouble(this->skorea3->Value));
 
-		loadValues(System::Convert::ToDouble(this->saudi1->Text->Substring(0, this->saudi1->Text->Length - 2)), System::Convert::ToInt32(this->saudi2->Value), System::Convert::ToInt32(this->saudi3->Value));
+		loadValues(System::Convert::ToDouble(this->saudi1->Text->Substring(0, this->saudi1->Text->Length - 2)), System::Convert::ToDouble(this->saudi2->Value), System::Convert::ToDouble(this->saudi3->Value));
 
-		loadValues(System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToInt32(this->indonesia2->Value), System::Convert::ToInt32(this->indonesia3->Value));
+		loadValues(System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToDouble(this->indonesia2->Value), System::Convert::ToDouble(this->indonesia3->Value));
 
-		loadValues(System::Convert::ToDouble(this->canada1->Text->Substring(0, this->canada1->Text->Length - 2)), System::Convert::ToInt32(this->canada2->Value), System::Convert::ToInt32(this->canada3->Value));
+		loadValues(System::Convert::ToDouble(this->canada1->Text->Substring(0, this->canada1->Text->Length - 2)), System::Convert::ToDouble(this->canada2->Value), System::Convert::ToDouble(this->canada3->Value));
 
-		loadValues(System::Convert::ToDouble(this->mexico1->Text->Substring(0, this->mexico1->Text->Length - 2)), System::Convert::ToInt32(this->mexico2->Value), System::Convert::ToInt32(this->mexico3->Value));
-	
+		loadValues(System::Convert::ToDouble(this->mexico1->Text->Substring(0, this->mexico1->Text->Length - 2)), System::Convert::ToDouble(this->mexico2->Value), System::Convert::ToDouble(this->mexico3->Value));
+
 	}
 
 	private: System::Void allemission_TextChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -955,6 +970,18 @@ namespace CppCLRWinformsProject {
 	private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 
 	}
-};
+	};
+
+	double totalEmission = 0;
+
+	void loadValues(double emission, double emissionMultiplier, double popMultiplier) {
+		totalEmission += emission * (1 + (emissionMultiplier / 100.0)) * (1 + (popMultiplier / 100.0);
+	}
+
+	void Calcualte() {
+		double c0 = 407; //co2 monthly average concentration in 2018
+
+		double tempIncrease = 1.66 * log(1 + ((totalEmission * 4/9) / c0))/log(2.71828);
+	}
 };
 
