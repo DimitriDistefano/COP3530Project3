@@ -35,7 +35,7 @@
     <ClInclude Include="HashTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data.h">
+    <ClInclude Include="dataNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

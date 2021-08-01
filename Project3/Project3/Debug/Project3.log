@@ -1,73 +1,11 @@
 ﻿  CppCLR_WinformsProjekt.cpp
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(18,5): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(18,5): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(18,11): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(18,11): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(22,5): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(22,5): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(22,11): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(22,11): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(26,9): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(26,9): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(26,25): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(26,25): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(30,10): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(30,10): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(30,21): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(30,21): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(34,10): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(34,10): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(34,21): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(34,21): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(9,20): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(9,20): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(14,7): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(14,7): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(23,7): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(23,7): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(35,6): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(35,6): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(14,8): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(14,8): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(19): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(19): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(19,7): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(19,7): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(31,30): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(31,30): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(36,7): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(36,7): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(48,33): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(48,33): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(120,45): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(120,45): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(199,7): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(199,7): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(206,6): error C2872: 'Data': ambiguous symbol
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Data.h(5,7): message : could be 'Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(206,6): message : or       'System::Data'
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Form1.h(978,36): error C2059: syntax error: ')'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(207,29): error C2039: 'dataNode': is not a member of 'RBTree::Node'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(10): message : see declaration of 'RBTree::Node'
   main.cpp
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(207,29): error C2039: 'dataNode': is not a member of 'RBTree::Node'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(10): message : see declaration of 'RBTree::Node'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\main.cpp(31,30): error C2039: 'printData': is not a member of 'dataNode'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\dataNode.h(5): message : see declaration of 'dataNode'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\main.cpp(33,29): error C2039: 'printData': is not a member of 'dataNode'
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\dataNode.h(5): message : see declaration of 'dataNode'
   Generating Code...

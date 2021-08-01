@@ -2,16 +2,16 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Data.h"
+#include "dataNode.h"
 using namespace std;
 
 class HashTable {
-	vector<vector<Data>> table;
+	vector<vector<dataNode>> table;
 	//IDs should be in the form ccdddd, where cc is a 2 digit country ID and dddd is a 4 digit date ID
 public:
-	//Change placeholder for whatever Data needs
+	//Change placeholder for whatever dataNode needs
 	void insert(int ID, int placeholder);
-	Data search(int ID);
+	dataNode search(int ID);
 };
 
 
@@ -20,7 +20,7 @@ public:
 using namespace std;
 
 void HashTable::insert(int ID, int placeholder) {
-	Data toInsert(placeholder);
+	dataNode toInsert(placeholder);
 	unsigned int countryID = ID / 10000;
 	unsigned int dateID = ID % 10000;
 	if (table.size() <= countryID) {
@@ -32,7 +32,7 @@ void HashTable::insert(int ID, int placeholder) {
 	table[countryID][dateID] = toInsert;
 }
 
-Data HashTable::search(int ID) {
+dataNode HashTable::search(int ID) {
 	int countryID = ID / 10000;
 	int dateID = ID % 10000;
 	return table[countryID][dateID];

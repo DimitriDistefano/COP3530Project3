@@ -2,7 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Data.h"
+#include "dataNode.h"
 using namespace std;
 
 class RBTree {
@@ -11,12 +11,12 @@ public:
 	public:
 		bool isRed = true;
 		int ID;
-		Data data;
 		Node* parent = nullptr;
 		Node* left = nullptr;
 		Node* right = nullptr;
 		Node();
-		Node(int ID, Data data);
+		Node(int ID, dataNode data);
+		dataNode data;
 	};
 	Node* root = nullptr;
 
@@ -28,12 +28,12 @@ private:
 	void rotateRightRight(Node* curr);
 
 public:
-	Node* insertID(int ID, Data data, Node* currNode);
+	Node* insertID(int ID, dataNode dataNode, Node* currNode);
 	Node* searchID(int ID, Node* root);
 	//IDs should be in the form ccdddd, where cc is a 2 digit country ID and dddd is a 4 digit date ID
-	//Change placeholder for whatever Data needs
+	//Change placeholder for whatever dataNode needs
 	Node* insert(int ID, int placeholder);
-	Data search(int ID);
+	dataNode search(int ID);
 
 
 	void debug_printInorder(Node* root);
@@ -45,7 +45,7 @@ RBTree::Node::Node() {
 	ID = -1;
 }
 
-RBTree::Node::Node(int ID, Data data) {
+RBTree::Node::Node(int ID, dataNode data) {
 	this->ID = ID;
 	this->data = data;
 }
@@ -117,18 +117,18 @@ void RBTree::rotateRightRight(Node* curr) {
 	rotateLeft(grandparent);
 }
 
-RBTree::Node* RBTree::insertID(int ID, Data data, Node* curr) {
+RBTree::Node* RBTree::insertID(int ID, dataNode dataNode, Node* curr) {
 	if (!curr) {
-		return new Node(ID, data);
+		return new Node(ID, dataNode);
 	}
 
 	else if (ID < curr->ID) {
-		curr->left = insertID(ID, data, curr->left);
+		curr->left = insertID(ID, dataNode, curr->left);
 		curr->left->parent = curr;
 	}
 
 	else if (ID > curr->ID) {
-		curr->right = insertID(ID, data, curr->right);
+		curr->right = insertID(ID, dataNode, curr->right);
 		curr->right->parent = curr;
 	}
 
@@ -196,15 +196,15 @@ void RBTree::balanceNodes(Node* curr) {
 }
 
 RBTree::Node* RBTree::insert(int ID, int placeholder) {
-	Data toInsert(placeholder);
+	dataNode toInsert(placeholder);
 	root = insertID(ID, toInsert, root);
 	Node* start = searchID(ID, root);
 	balanceNodes(start);
 	return root;
 }
 
-Data RBTree::search(int ID) {
-	return searchID(ID, root)->data;
+dataNode RBTree::search(int ID) {
+	return searchID(ID, root)->dataNode;
 }
 
 void RBTree::debug_printInorder(Node* root) {

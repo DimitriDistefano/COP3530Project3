@@ -975,10 +975,10 @@ private: System::Windows::Forms::Label^ label1;
 	double totalEmission = 0;
 
 	void loadValues(double emission, double emissionMultiplier, double popMultiplier) {
-		totalEmission += emission * (1 + (emissionMultiplier / 100.0)) * (1 + (popMultiplier / 100.0);
+		totalEmission += emission * (1 + (emissionMultiplier / 100.0)) * (1 + (popMultiplier / 100.0));
 	}
 
-	void Calcualte() {
+	void Calculate() {
 		double c0 = 407; //co2 monthly average concentration in 2018
 
 		double tempIncrease = 1.66 * log(1 + ((totalEmission * 4/9) / c0))/log(2.71828);
