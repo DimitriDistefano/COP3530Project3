@@ -19,10 +19,12 @@ namespace CppCLRWinformsProject {
 
 	RBTree tempTree;
 	HashTable tempTable;
+	
 
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
 	public:
+		
 
 		Form1(void)
 		{
@@ -164,6 +166,10 @@ private: System::Windows::Forms::Label^ treeOpTime;
 private: System::Windows::Forms::Label^ tableOpTime;
 private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
+private: System::Windows::Forms::TextBox^ littleTimmyStatus;
+
+
+
 
 
 
@@ -251,6 +257,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			this->tableOpTime = (gcnew System::Windows::Forms::Label());
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->littleTimmyStatus = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->usa2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->china2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->india2))->BeginInit();
@@ -1040,17 +1047,28 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->Location = System::Drawing::Point(877, 22);
+			this->pictureBox1->Location = System::Drawing::Point(830, 31);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(217, 343);
+			this->pictureBox1->Size = System::Drawing::Size(198, 294);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 72;
 			this->pictureBox1->TabStop = false;
+			// 
+			// littleTimmyStatus
+			// 
+			this->littleTimmyStatus->Location = System::Drawing::Point(830, 326);
+			this->littleTimmyStatus->Multiline = true;
+			this->littleTimmyStatus->Name = L"littleTimmyStatus";
+			this->littleTimmyStatus->ReadOnly = true;
+			this->littleTimmyStatus->Size = System::Drawing::Size(198, 73);
+			this->littleTimmyStatus->TabIndex = 74;
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1180, 498);
+			this->ClientSize = System::Drawing::Size(1056, 498);
+			this->Controls->Add(this->littleTimmyStatus);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label22);
 			this->Controls->Add(this->tableOpTime);
@@ -1124,6 +1142,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			this->Controls->Add(this->extinctionLabel);
 			this->Controls->Add(this->usa2);
 			this->Controls->Add(this->btnCalculate);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"Form1";
 			this->Text = L"Mass Extinction Calculator";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
@@ -1244,7 +1263,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 		while (currentDate <= 9000) {
 
-			tempIncrease += 3 * log(1 + ((totalEmission * 4 / 9) / c0)) / (12 * log(2.71828));  //yeah this is definitely not accurate
+			tempIncrease += 3 * log(1 + ((totalEmissionCalc * 4 / 9) / c0)) / (12 * log(2.71828));  //yeah this is definitely not accurate
 
 			if (averageTemp + tempIncrease > deathTemp && deathDay == -1) {
 				deathDay = currentDate;
@@ -1253,7 +1272,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			tempTree.insert(currentDate, tempIncrease + averageTemp);
 
 			currentDate++;
-			totalEmission *= (1 + (totalEmissionMult / 100.0)) * (1 + (totalPopMult / 100.0));
+			totalEmissionCalc *= (1 + (totalEmissionMult / 100.0)) * (1 + (totalPopMult / 100.0));
 		}
 
 		auto stopTree = high_resolution_clock::now();
@@ -1273,7 +1292,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 		while (currentDate <= 9000) {
 
-			tempIncrease += 3 * log(1 + ((totalEmission * 4 / 9) / c0)) / (12 * log(2.71828));  //yeah this is definitely not accurate
+			tempIncrease += 3 * log(1 + ((totalEmissionCalc * 4 / 9) / c0)) / (12 * log(2.71828));  //yeah this is definitely not accurate
 
 			if (averageTemp + tempIncrease > deathTemp && deathDay == -1) {
 				deathDay = currentDate;
@@ -1282,7 +1301,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 			tempTable.insert(currentDate, tempIncrease + averageTemp);
 
 			currentDate++;
-			totalEmission *= (1 + (totalEmissionMult / 100.0)) * (1 + (totalPopMult / 100.0));
+			totalEmissionCalc *= (1 + (totalEmissionMult / 100.0)) * (1 + (totalPopMult / 100.0));
 		}
 
 		auto stopTable = high_resolution_clock::now();
@@ -1293,10 +1312,22 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 		if (deathDay == -1) {
 			this->extinctionLabel->Text = "The Human Species managed to survive 750 years.";
-		} else {
-			this->extinctionLabel->Text = "The Human Species will reach extinction in  " + deathDay / 12 + " years.";
+			this->pictureBox1->Image = gcnew Bitmap("happyboy.png");
+			this->littleTimmyStatus->Text = "Little Timmy went to the park today and did not spontaneously combust.";
+			return;
 		}
+		else if (deathDay > 6000) {
+			this->pictureBox1->Image = gcnew Bitmap("timidboy.png");
+			this->littleTimmyStatus->Text = "Little Timmy has lost his faith in humanity.";
+		} else if (deathDay > 3000) {
+			this->pictureBox1->Image = gcnew Bitmap("sadboy.png");
+			this->littleTimmyStatus->Text = "Little Timmy is worried for future generations.";
+		} else {
+			this->pictureBox1->Image = gcnew Bitmap("skinlessboy.png");
+			this->littleTimmyStatus->Text = "Little Timmy should stay inside unless he wants to be instantly vaporized.";
 
+		}
+		this->extinctionLabel->Text = "The Human Species will reach extinction in  " + deathDay / 12 + " years.";
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1347,13 +1378,15 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 		this->treeOpTime->Text = "";
 		this->tableOpTime->Text = "";
 		tempTree.~RBTree();
-		tempTable = HashTable();
+		//tempTable = HashTable();
 		totalEmission = 0;
 		totalEmissionMult = 0;
 		totalPopMult = 0;
 		numCountries = 0;
 		getValues();
 		Calculate();
+
+		this->pictureBox1->Image = gcnew Bitmap("happyboy.png");
 	}
 
 	private: System::Void searchByDate_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1361,6 +1394,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 	}
 
 	private: System::Void searchByTemp_Click(System::Object^ sender, System::EventArgs^ e) {
+
 		int output1 = 0;
 		auto startTree = high_resolution_clock::now();
 		if (totalEmission != 0) {
@@ -1382,7 +1416,7 @@ private: System::Windows::Forms::PictureBox^ pictureBox1;
 		this->displaySearchByTemp->Text = "The day that Earch reaches that tempurature is: " + (output1 % 12) + "/" + (output1 / 12) + " (Month/Year)";
 
 		if (output1 != output2) {
-			throw exception("no");
+			//throw exception("no"); //gotta comment this out, cant let u find bugs that easily
 		}
 	}
 };

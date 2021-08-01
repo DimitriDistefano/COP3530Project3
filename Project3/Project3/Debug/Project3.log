@@ -1,7 +1,7 @@
 ﻿  CppCLR_WinformsProjekt.cpp
 C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(39,16): warning C4018: '>=': signed/unsigned mismatch
 C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\HashTable.h(39,42): warning C4018: '>=': signed/unsigned mismatch
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Form1.h(1355,103): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Form1.h(1362,104): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Form1.h(1401,103): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\Form1.h(1408,104): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Project3.vcxproj -> C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Debug\Project3.exe
