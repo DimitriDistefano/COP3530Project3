@@ -1,4 +1,5 @@
 ﻿  CppCLR_WinformsProjekt.cpp
+<<<<<<< HEAD
 C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(207,29): error C2039: 'dataNode': is not a member of 'RBTree::Node'
 C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\RBTree.h(10): message : see declaration of 'RBTree::Node'
   main.cpp
@@ -9,3 +10,7 @@ C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Pr
 C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\main.cpp(33,29): error C2039: 'printData': is not a member of 'dataNode'
 C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Project3\dataNode.h(5): message : see declaration of 'dataNode'
   Generating Code...
+=======
+  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Project3.vcxproj -> C:\Users\Dimitri.000\Desktop\UF\Summer 2021\COP 3530\COP3530Project3\Project3\Debug\Project3.exe
+>>>>>>> parent of 930c8e0 (more Code, figured out temp change based on emissions)
