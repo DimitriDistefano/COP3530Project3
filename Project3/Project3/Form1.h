@@ -1527,7 +1527,7 @@ private: System::Windows::Forms::Label^ label23;
 
 
 		if (emission1 == -123456) {
-			this->displaySearchByDate->Text = "Please Enter a Value date";
+			this->displaySearchByDate->Text = "Please Enter a valid date";
 		}
 		else {
 			this->displaySearchByDate->Text = "The emissions on this month are: " + round(emission1/12*100)/100.0 + "GT";
@@ -1554,11 +1554,12 @@ private: System::Windows::Forms::Label^ label23;
 		this->treeOpTime->Text = "Tree Operation Time: " + durationTree.count() + " microseconds.";
 		this->tableOpTime->Text = "Table Operation Time: " + durationTable.count() + " microseconds.";
 
-		if (output1 == -123456) {
-			this->displaySearchByTemp->Text = "Please enter a valid date";
+		if (output2 == -123456) {
+			this->displaySearchByTemp->Text = "Tempurature is out of range";
+			return;
 		}
 		else {
-			this->displaySearchByTemp->Text = "The day that Earch reaches that tempurature is: " + ((output1 % 12)) + "/" + (2018 + (output1 / 12)) + " (Month/Year)";
+			this->displaySearchByTemp->Text = "The day that Earth reaches that tempurature is: " + ((output1 % 12)) + "/" + (2018 + (output1 / 12)) + " (Month/Year)";
 		}
 
 		if (output1 != output2) {

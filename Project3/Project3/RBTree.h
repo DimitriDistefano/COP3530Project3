@@ -154,6 +154,9 @@ RBTree::Node* RBTree::insertID(int ID, dataNode dataNode, Node* curr) {
 }
 
 RBTree::Node* RBTree::searchID(int ID, Node* root) {
+	if (!root) {
+		return nullptr;
+	}
 	if (root->ID == ID) {
 		return root;
 	}
@@ -267,8 +270,6 @@ int RBTree::searchVal(double val) {
 	searchValHelper(temp, val, root);
 	return id;
 }
-
-
 
 void RBTree::searchValHelper(dataNode& temp, double val, Node* node) {
 	//Change placeholder here
