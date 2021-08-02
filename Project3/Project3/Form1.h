@@ -1553,8 +1553,7 @@ private: System::Windows::Forms::Label^ label23;
 		if (output2 == -123456) {
 			this->displaySearchByTemp->Text = "Tempurature is out of range";
 			return;
-		}
-		else {
+		} else {
 			this->displaySearchByTemp->Text = "The day that Earth reaches that tempurature is: " + ((output1 % 12)) + "/" + (2018 + (output1 / 12)) + " (Month/Year)";
 		}
 
