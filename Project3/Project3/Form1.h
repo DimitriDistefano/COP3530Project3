@@ -19,6 +19,10 @@ namespace CppCLRWinformsProject {
 
 	RBTree tempTree;
 	HashTable tempTable;
+
+
+	RBTree emissionTree;
+	HashTable emissionTable;
 	
 
 	public ref class Form1 : public System::Windows::Forms::Form
@@ -158,8 +162,8 @@ private: System::Windows::Forms::Label^ label20;
 private: System::Windows::Forms::Label^ label21;
 private: System::Windows::Forms::NumericUpDown^ enterSearchTemp;
 
-private: System::Windows::Forms::Label^ displaySearchByTemp;
-private: System::Windows::Forms::Label^ displaySearchByDate;
+
+
 private: System::Windows::Forms::Button^ searchByDate;
 private: System::Windows::Forms::Button^ searchByTemp;
 private: System::Windows::Forms::Label^ treeOpTime;
@@ -167,6 +171,9 @@ private: System::Windows::Forms::Label^ tableOpTime;
 private: System::Windows::Forms::Label^ label22;
 private: System::Windows::Forms::PictureBox^ pictureBox1;
 private: System::Windows::Forms::TextBox^ littleTimmyStatus;
+private: System::Windows::Forms::TextBox^ displaySearchByDate;
+private: System::Windows::Forms::TextBox^ displaySearchByTemp;
+private: System::Windows::Forms::Label^ label23;
 
 
 
@@ -249,8 +256,6 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->enterSearchTemp = (gcnew System::Windows::Forms::NumericUpDown());
-			this->displaySearchByTemp = (gcnew System::Windows::Forms::Label());
-			this->displaySearchByDate = (gcnew System::Windows::Forms::Label());
 			this->searchByDate = (gcnew System::Windows::Forms::Button());
 			this->searchByTemp = (gcnew System::Windows::Forms::Button());
 			this->treeOpTime = (gcnew System::Windows::Forms::Label());
@@ -258,6 +263,9 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			this->label22 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->littleTimmyStatus = (gcnew System::Windows::Forms::TextBox());
+			this->displaySearchByDate = (gcnew System::Windows::Forms::TextBox());
+			this->displaySearchByTemp = (gcnew System::Windows::Forms::TextBox());
+			this->label23 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->usa2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->china2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->india2))->BeginInit();
@@ -935,7 +943,7 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			// enterYearSearch
 			// 
 			this->enterYearSearch->Location = System::Drawing::Point(650, 81);
-			this->enterYearSearch->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 10000, 0, 0, 0 });
+			this->enterYearSearch->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2768, 0, 0, 0 });
 			this->enterYearSearch->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 2018, 0, 0, 0 });
 			this->enterYearSearch->Name = L"enterYearSearch";
 			this->enterYearSearch->Size = System::Drawing::Size(120, 20);
@@ -972,31 +980,14 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			// enterSearchTemp
 			// 
 			this->enterSearchTemp->DecimalPlaces = 1;
+			this->enterSearchTemp->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 65536 });
 			this->enterSearchTemp->Location = System::Drawing::Point(510, 240);
-			this->enterSearchTemp->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 69, 0, 0, 0 });
+			this->enterSearchTemp->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
 			this->enterSearchTemp->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 146, 0, 0, 65536 });
 			this->enterSearchTemp->Name = L"enterSearchTemp";
 			this->enterSearchTemp->Size = System::Drawing::Size(120, 20);
 			this->enterSearchTemp->TabIndex = 63;
 			this->enterSearchTemp->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 146, 0, 0, 65536 });
-			// 
-			// displaySearchByTemp
-			// 
-			this->displaySearchByTemp->AutoSize = true;
-			this->displaySearchByTemp->Location = System::Drawing::Point(510, 267);
-			this->displaySearchByTemp->Name = L"displaySearchByTemp";
-			this->displaySearchByTemp->Size = System::Drawing::Size(122, 13);
-			this->displaySearchByTemp->TabIndex = 65;
-			this->displaySearchByTemp->Text = L"Display search by temop";
-			// 
-			// displaySearchByDate
-			// 
-			this->displaySearchByDate->AutoSize = true;
-			this->displaySearchByDate->Location = System::Drawing::Point(647, 170);
-			this->displaySearchByDate->Name = L"displaySearchByDate";
-			this->displaySearchByDate->Size = System::Drawing::Size(122, 13);
-			this->displaySearchByDate->TabIndex = 66;
-			this->displaySearchByDate->Text = L"Display search by temop";
 			// 
 			// searchByDate
 			// 
@@ -1021,7 +1012,7 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			// treeOpTime
 			// 
 			this->treeOpTime->AutoSize = true;
-			this->treeOpTime->Location = System::Drawing::Point(585, 386);
+			this->treeOpTime->Location = System::Drawing::Point(697, 435);
 			this->treeOpTime->Name = L"treeOpTime";
 			this->treeOpTime->Size = System::Drawing::Size(47, 13);
 			this->treeOpTime->TabIndex = 69;
@@ -1030,7 +1021,7 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			// tableOpTime
 			// 
 			this->tableOpTime->AutoSize = true;
-			this->tableOpTime->Location = System::Drawing::Point(585, 430);
+			this->tableOpTime->Location = System::Drawing::Point(697, 473);
 			this->tableOpTime->Name = L"tableOpTime";
 			this->tableOpTime->Size = System::Drawing::Size(52, 13);
 			this->tableOpTime->TabIndex = 70;
@@ -1039,7 +1030,7 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(5, 326);
+			this->label22->Location = System::Drawing::Point(8, 395);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(73, 13);
 			this->label22->TabIndex = 71;
@@ -1063,11 +1054,41 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			this->littleTimmyStatus->Size = System::Drawing::Size(198, 73);
 			this->littleTimmyStatus->TabIndex = 74;
 			// 
+			// displaySearchByDate
+			// 
+			this->displaySearchByDate->Location = System::Drawing::Point(650, 148);
+			this->displaySearchByDate->Multiline = true;
+			this->displaySearchByDate->Name = L"displaySearchByDate";
+			this->displaySearchByDate->ReadOnly = true;
+			this->displaySearchByDate->Size = System::Drawing::Size(120, 43);
+			this->displaySearchByDate->TabIndex = 75;
+			// 
+			// displaySearchByTemp
+			// 
+			this->displaySearchByTemp->Location = System::Drawing::Point(510, 266);
+			this->displaySearchByTemp->Multiline = true;
+			this->displaySearchByTemp->Name = L"displaySearchByTemp";
+			this->displaySearchByTemp->ReadOnly = true;
+			this->displaySearchByTemp->Size = System::Drawing::Size(120, 59);
+			this->displaySearchByTemp->TabIndex = 76;
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Location = System::Drawing::Point(8, 423);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(106, 13);
+			this->label23->TabIndex = 77;
+			this->label23->Text = L"Time Period: Monthly";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1056, 498);
+			this->Controls->Add(this->label23);
+			this->Controls->Add(this->displaySearchByTemp);
+			this->Controls->Add(this->displaySearchByDate);
 			this->Controls->Add(this->littleTimmyStatus);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->label22);
@@ -1075,8 +1096,6 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			this->Controls->Add(this->treeOpTime);
 			this->Controls->Add(this->searchByTemp);
 			this->Controls->Add(this->searchByDate);
-			this->Controls->Add(this->displaySearchByDate);
-			this->Controls->Add(this->displaySearchByTemp);
 			this->Controls->Add(this->label21);
 			this->Controls->Add(this->enterSearchTemp);
 			this->Controls->Add(this->label20);
@@ -1205,24 +1224,6 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 
 			loadValues(System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToDouble(this->indonesia2->Value), System::Convert::ToDouble(this->indonesia3->Value));
 
-			loadValues(System::Convert::ToDouble(this->usa1->Text->Substring(0, this->usa1->Text->Length - 2)), System::Convert::ToDouble(this->usa2->Value), System::Convert::ToDouble(this->usa3->Value));
-
-			loadValues(System::Convert::ToDouble(this->india1->Text->Substring(0, this->india1->Text->Length - 2)), System::Convert::ToDouble(this->india2->Value), System::Convert::ToDouble(this->india3->Value));
-
-			loadValues(System::Convert::ToDouble(this->russia1->Text->Substring(0, this->russia1->Text->Length - 2)), System::Convert::ToDouble(this->russia2->Value), System::Convert::ToDouble(this->russia3->Value));
-
-			loadValues(System::Convert::ToDouble(this->japan1->Text->Substring(0, this->japan1->Text->Length - 2)), System::Convert::ToDouble(this->japan2->Value), System::Convert::ToDouble(this->japan3->Value));
-
-			loadValues(System::Convert::ToDouble(this->germany1->Text->Substring(0, this->germany1->Text->Length - 2)), System::Convert::ToDouble(this->germany2->Value), System::Convert::ToDouble(this->germany3->Value));
-
-			loadValues(System::Convert::ToDouble(this->iran1->Text->Substring(0, this->iran1->Text->Length - 2)), System::Convert::ToDouble(this->iran2->Value), System::Convert::ToDouble(this->iran3->Value));
-
-			loadValues(System::Convert::ToDouble(this->skorea1->Text->Substring(0, this->skorea1->Text->Length - 2)), System::Convert::ToDouble(this->skorea2->Value), System::Convert::ToDouble(this->skorea3->Value));
-
-			loadValues(System::Convert::ToDouble(this->saudi1->Text->Substring(0, this->saudi1->Text->Length - 2)), System::Convert::ToDouble(this->saudi2->Value), System::Convert::ToDouble(this->saudi3->Value));
-
-			loadValues(System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToDouble(this->indonesia2->Value), System::Convert::ToDouble(this->indonesia3->Value));
-
 			loadValues(System::Convert::ToDouble(this->canada1->Text->Substring(0, this->canada1->Text->Length - 2)), System::Convert::ToDouble(this->canada2->Value), System::Convert::ToDouble(this->canada3->Value));
 
 			loadValues(System::Convert::ToDouble(this->mexico1->Text->Substring(0, this->mexico1->Text->Length - 2)), System::Convert::ToDouble(this->mexico2->Value), System::Convert::ToDouble(this->mexico3->Value));
@@ -1251,9 +1252,10 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 		double deathTemp = 69;
 
 		double averageTemp = 14.6;
+
 		int currentDate = 1;
 
-		int deathDay = -1;
+		int deathDate = -1;
 
 		double totalEmissionCalc = totalEmission;
 
@@ -1265,9 +1267,11 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 
 			tempIncrease += 3 * log(1 + ((totalEmissionCalc * 4 / 9) / c0)) / (12 * log(2.71828));  //yeah this is definitely not accurate
 
-			if (averageTemp + tempIncrease > deathTemp && deathDay == -1) {
-				deathDay = currentDate;
+
+			if (averageTemp + tempIncrease > deathTemp && deathDate == -1) {
+				deathDate = currentDate;
 			}
+
 
 			tempTree.insert(currentDate, tempIncrease + averageTemp);
 
@@ -1275,12 +1279,14 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			totalEmissionCalc *= (1 + (totalEmissionMult / 100.0)) * (1 + (totalPopMult / 100.0));
 		}
 
+		calculateEmissionTree();
+
 		auto stopTree = high_resolution_clock::now();
 		auto durationTree = duration_cast<microseconds>(stopTree - startTree);
 
 		currentDate = 1;
 
-		deathDay = -1;
+		deathDate = -1;
 
 		tempIncrease = 0;
 
@@ -1294,8 +1300,8 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 
 			tempIncrease += 3 * log(1 + ((totalEmissionCalc * 4 / 9) / c0)) / (12 * log(2.71828));  //yeah this is definitely not accurate
 
-			if (averageTemp + tempIncrease > deathTemp && deathDay == -1) {
-				deathDay = currentDate;
+			if (averageTemp + tempIncrease > deathTemp && deathDate == -1) {
+				deathDate = currentDate;
 			}
 
 			tempTable.insert(currentDate, tempIncrease + averageTemp);
@@ -1304,30 +1310,133 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 			totalEmissionCalc *= (1 + (totalEmissionMult / 100.0)) * (1 + (totalPopMult / 100.0));
 		}
 
+		calculateEmissionTable();
+
 		auto stopTable = high_resolution_clock::now();
 		auto durationTable = duration_cast<microseconds>(stopTable - startTable);
 
 		this->treeOpTime->Text = "Tree Operation Time: " + durationTree.count() + " microseconds.";
 		this->tableOpTime->Text = "Table Operation Time: " + durationTable.count() + " microseconds.";
 
-		if (deathDay == -1) {
+		
+
+		if (deathDate == -1) {
 			this->extinctionLabel->Text = "The Human Species managed to survive 750 years.";
 			this->pictureBox1->Image = gcnew Bitmap("happyboy.png");
 			this->littleTimmyStatus->Text = "Little Timmy went to the park today and did not spontaneously combust.";
 			return;
 		}
-		else if (deathDay > 6000) {
+		else if (deathDate > 6000) {
 			this->pictureBox1->Image = gcnew Bitmap("timidboy.png");
 			this->littleTimmyStatus->Text = "Little Timmy has lost his faith in humanity.";
-		} else if (deathDay > 3000) {
+		} else if (deathDate > 3000) {
 			this->pictureBox1->Image = gcnew Bitmap("sadboy.png");
 			this->littleTimmyStatus->Text = "Little Timmy is worried for future generations.";
 		} else {
 			this->pictureBox1->Image = gcnew Bitmap("skinlessboy.png");
-			this->littleTimmyStatus->Text = "Little Timmy should stay inside unless he wants to be instantly vaporized.";
+			this->littleTimmyStatus->Text = "Little Timmy cannot go to the park in " + (int)(tempTable.search(9000).getPlaceholder()) + " degree weather.";
 
 		}
-		this->extinctionLabel->Text = "The Human Species will reach extinction in  " + deathDay / 12 + " years.";
+		this->extinctionLabel->Text = "The Human Species will reach mass extinction in " + deathDate / 12 + " years.";
+	}
+
+	void calculateCountryEmissionTable(int countryId, double emission, double emissionMultiplier, double popMultiplier) {
+		for (int i = 1; i <= 9000; i++) {
+			emission *= (1 + (emissionMultiplier / 100.0)) * (1 + (popMultiplier / 100.0));
+			emissionTable.insert(countryId * 10000 + i, emission);
+		}
+	}
+	
+	void calculateCountryEmissionTree(int countryId, double emission, double emissionMultiplier, double popMultiplier) {
+		for (int i = 1; i <= 9000; i++) {
+			emission *= (1 + (emissionMultiplier / 100.0)) * (1 + (popMultiplier / 100.0));
+			emissionTree.insert(countryId * 10000 + i, emission);
+		}
+	}
+
+	void calculateEmissionTable() {
+
+
+		calculateCountryEmissionTable(0, System::Convert::ToDouble(this->china1->Text->Substring(0, this->china1->Text->Length - 2)), System::Convert::ToDouble(this->china2->Value), System::Convert::ToDouble(this->china3->Value));
+
+		calculateCountryEmissionTable(1, System::Convert::ToDouble(this->usa1->Text->Substring(0, this->usa1->Text->Length - 2)), System::Convert::ToDouble(this->usa2->Value), System::Convert::ToDouble(this->usa3->Value));
+
+		calculateCountryEmissionTable(2, System::Convert::ToDouble(this->india1->Text->Substring(0, this->india1->Text->Length - 2)), System::Convert::ToDouble(this->india2->Value), System::Convert::ToDouble(this->india3->Value));
+
+		calculateCountryEmissionTable(3, System::Convert::ToDouble(this->russia1->Text->Substring(0, this->russia1->Text->Length - 2)), System::Convert::ToDouble(this->russia2->Value), System::Convert::ToDouble(this->russia3->Value));
+
+		calculateCountryEmissionTable(4, System::Convert::ToDouble(this->japan1->Text->Substring(0, this->japan1->Text->Length - 2)), System::Convert::ToDouble(this->japan2->Value), System::Convert::ToDouble(this->japan3->Value));
+
+		calculateCountryEmissionTable(5, System::Convert::ToDouble(this->germany1->Text->Substring(0, this->germany1->Text->Length - 2)), System::Convert::ToDouble(this->germany2->Value), System::Convert::ToDouble(this->germany3->Value));
+
+		calculateCountryEmissionTable(6, System::Convert::ToDouble(this->iran1->Text->Substring(0, this->iran1->Text->Length - 2)), System::Convert::ToDouble(this->iran2->Value), System::Convert::ToDouble(this->iran3->Value));
+
+		calculateCountryEmissionTable(7, System::Convert::ToDouble(this->skorea1->Text->Substring(0, this->skorea1->Text->Length - 2)), System::Convert::ToDouble(this->skorea2->Value), System::Convert::ToDouble(this->skorea3->Value));
+
+		calculateCountryEmissionTable(8, System::Convert::ToDouble(this->saudi1->Text->Substring(0, this->saudi1->Text->Length - 2)), System::Convert::ToDouble(this->saudi2->Value), System::Convert::ToDouble(this->saudi3->Value));
+
+		calculateCountryEmissionTable(9, System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToDouble(this->indonesia2->Value), System::Convert::ToDouble(this->indonesia3->Value));
+
+		calculateCountryEmissionTable(10, System::Convert::ToDouble(this->canada1->Text->Substring(0, this->canada1->Text->Length - 2)), System::Convert::ToDouble(this->canada2->Value), System::Convert::ToDouble(this->canada3->Value));
+
+		calculateCountryEmissionTable(11, System::Convert::ToDouble(this->mexico1->Text->Substring(0, this->mexico1->Text->Length - 2)), System::Convert::ToDouble(this->mexico2->Value), System::Convert::ToDouble(this->mexico3->Value));
+
+	}
+
+	void calculateEmissionTree() {
+
+		calculateCountryEmissionTree(0, System::Convert::ToDouble(this->china1->Text->Substring(0, this->china1->Text->Length - 2)), System::Convert::ToDouble(this->china2->Value), System::Convert::ToDouble(this->china3->Value));
+
+		calculateCountryEmissionTree(1, System::Convert::ToDouble(this->usa1->Text->Substring(0, this->usa1->Text->Length - 2)), System::Convert::ToDouble(this->usa2->Value), System::Convert::ToDouble(this->usa3->Value));
+
+		calculateCountryEmissionTree(2, System::Convert::ToDouble(this->india1->Text->Substring(0, this->india1->Text->Length - 2)), System::Convert::ToDouble(this->india2->Value), System::Convert::ToDouble(this->india3->Value));
+
+		calculateCountryEmissionTree(3, System::Convert::ToDouble(this->russia1->Text->Substring(0, this->russia1->Text->Length - 2)), System::Convert::ToDouble(this->russia2->Value), System::Convert::ToDouble(this->russia3->Value));
+
+		calculateCountryEmissionTree(4, System::Convert::ToDouble(this->japan1->Text->Substring(0, this->japan1->Text->Length - 2)), System::Convert::ToDouble(this->japan2->Value), System::Convert::ToDouble(this->japan3->Value));
+
+		calculateCountryEmissionTree(5, System::Convert::ToDouble(this->germany1->Text->Substring(0, this->germany1->Text->Length - 2)), System::Convert::ToDouble(this->germany2->Value), System::Convert::ToDouble(this->germany3->Value));
+
+		calculateCountryEmissionTree(6, System::Convert::ToDouble(this->iran1->Text->Substring(0, this->iran1->Text->Length - 2)), System::Convert::ToDouble(this->iran2->Value), System::Convert::ToDouble(this->iran3->Value));
+
+		calculateCountryEmissionTree(7, System::Convert::ToDouble(this->skorea1->Text->Substring(0, this->skorea1->Text->Length - 2)), System::Convert::ToDouble(this->skorea2->Value), System::Convert::ToDouble(this->skorea3->Value));
+
+		calculateCountryEmissionTree(8, System::Convert::ToDouble(this->saudi1->Text->Substring(0, this->saudi1->Text->Length - 2)), System::Convert::ToDouble(this->saudi2->Value), System::Convert::ToDouble(this->saudi3->Value));
+
+		calculateCountryEmissionTree(9, System::Convert::ToDouble(this->indonesia1->Text->Substring(0, this->indonesia1->Text->Length - 2)), System::Convert::ToDouble(this->indonesia2->Value), System::Convert::ToDouble(this->indonesia3->Value));
+
+		calculateCountryEmissionTree(10, System::Convert::ToDouble(this->canada1->Text->Substring(0, this->canada1->Text->Length - 2)), System::Convert::ToDouble(this->canada2->Value), System::Convert::ToDouble(this->canada3->Value));
+
+		calculateCountryEmissionTree(11, System::Convert::ToDouble(this->mexico1->Text->Substring(0, this->mexico1->Text->Length - 2)), System::Convert::ToDouble(this->mexico2->Value), System::Convert::ToDouble(this->mexico3->Value));
+
+	}
+
+	int getCountryId(String^ name) {
+		if (name == "China") {
+			return 0;
+		} else if (name == "USA") {
+			return 1;
+		} else if (name == "India") {
+			return 2;
+		} else if (name == "Russia") {
+			return 3;
+		} else if (name == "Japan") {
+			return 4;
+		} else if (name == "Germany") {
+			return 5;
+		} else if (name == "Iran") {
+			return 6;
+		} else if (name == "S. Korea") {
+			return 7;
+		} else if (name == "Saudi Arabia") {
+			return 8;
+		} else if (name == "Indonesia") {
+			return 9;
+		} else if (name == "Canada") {
+			return 10;
+		} else if (name == "Mexico") {
+			return 11;
+		}
 	}
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1378,7 +1487,7 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 		this->treeOpTime->Text = "";
 		this->tableOpTime->Text = "";
 		tempTree.~RBTree();
-		//tempTable = HashTable();
+		tempTable = HashTable();
 		totalEmission = 0;
 		totalEmissionMult = 0;
 		totalPopMult = 0;
@@ -1387,10 +1496,42 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 		Calculate();
 
 		this->pictureBox1->Image = gcnew Bitmap("happyboy.png");
+		this->listBox1->SelectedIndex = 0;
 	}
 
 	private: System::Void searchByDate_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		int date = System::Convert::ToInt32(this->enterMonthSearch->Value) + (System::Convert::ToInt32(this->enterYearSearch->Value) -2018) * 12;
 
+		
+		auto startTable = high_resolution_clock::now();
+		
+		double emission1 = emissionTable.search(getCountryId(this->listBox1->SelectedItem->ToString()) * 10000 + date).getPlaceholder();
+		
+		auto stopTable = high_resolution_clock::now();
+		auto durationTable = duration_cast<microseconds>(stopTable - startTable);
+
+		auto startTree = high_resolution_clock::now();
+
+		double emission2 = emissionTree.search(getCountryId(this->listBox1->SelectedItem->ToString()) * 10000 + date).getPlaceholder();
+
+		auto stopTree = high_resolution_clock::now();
+		auto durationTree = duration_cast<microseconds>(stopTree - startTree);
+
+		if (emission1 != emission2) {
+			//throw exception("no"); //gotta comment this out, cant let u find bugs that easily
+		}
+
+		this->treeOpTime->Text = "Tree Operation Time: " + durationTree.count() + " microseconds.";
+		this->tableOpTime->Text = "Table Operation Time: " + durationTable.count() + " microseconds.";
+
+
+		if (emission1 == -123456) {
+			this->displaySearchByDate->Text = "Please Enter a Value date";
+		}
+		else {
+			this->displaySearchByDate->Text = "The emissions on this month are: " + round(emission1/12*100)/100.0 + "GT";
+		}
 	}
 
 	private: System::Void searchByTemp_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1398,14 +1539,14 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 		int output1 = 0;
 		auto startTree = high_resolution_clock::now();
 		if (totalEmission != 0) {
-			output1 = tempTree.searchVal(System::Convert::ToDouble(this->enterSearchTemp->Text)).getPlaceholder();
+			output1 = tempTree.searchVal(System::Convert::ToDouble(this->enterSearchTemp->Text));
 		}
 		auto stopTree = high_resolution_clock::now();
 		auto durationTree = duration_cast<microseconds>(stopTree - startTree);
 		int output2 = 0;
 		auto startTable = high_resolution_clock::now();
 		if (totalEmission != 0) {
-			output2 = tempTable.searchVal(System::Convert::ToDouble(this->enterSearchTemp->Text)).getPlaceholder();
+			output2 = tempTable.searchVal(System::Convert::ToDouble(this->enterSearchTemp->Text));
 		}
 		auto stopTable = high_resolution_clock::now();
 		auto durationTable = duration_cast<microseconds>(stopTable - startTable);
@@ -1413,10 +1554,15 @@ private: System::Windows::Forms::TextBox^ littleTimmyStatus;
 		this->treeOpTime->Text = "Tree Operation Time: " + durationTree.count() + " microseconds.";
 		this->tableOpTime->Text = "Table Operation Time: " + durationTable.count() + " microseconds.";
 
-		this->displaySearchByTemp->Text = "The day that Earch reaches that tempurature is: " + (output1 % 12) + "/" + (output1 / 12) + " (Month/Year)";
+		if (output1 == -123456) {
+			this->displaySearchByTemp->Text = "Please enter a valid date";
+		}
+		else {
+			this->displaySearchByTemp->Text = "The day that Earch reaches that tempurature is: " + ((output1 % 12)) + "/" + (2018 + (output1 / 12)) + " (Month/Year)";
+		}
 
 		if (output1 != output2) {
-			//throw exception("no"); //gotta comment this out, cant let u find bugs that easily
+			throw exception("no"); //gotta comment this out, cant let u find bugs that easily
 		}
 	}
 };

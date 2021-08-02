@@ -12,7 +12,7 @@ public:
 	//Change placeholder for whatever dataNode needs
 	void insert(int ID, double placeholder);
 	dataNode search(int ID);
-	dataNode searchVal(double val);
+	int searchVal(double val);
 };
 
 
@@ -43,14 +43,13 @@ dataNode HashTable::search(int ID) {
 	return table[countryID][dateID];
 }
 
-dataNode HashTable::searchVal(double val) {
+int HashTable::searchVal(double val) {
 	int len = table[0].size();
 	for (int i = 0; i < len; i++) {
 		//Change access function here
 		if (table[0][i].getPlaceholder() >= val) {
-			return table[0][i];
+			return i;
 		}
 	}
-	dataNode empty;
-	return empty;
+	return -123456;
 }

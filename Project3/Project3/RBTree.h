@@ -37,7 +37,7 @@ public:
 	~RBTree();
 	void deleteRBTree(Node* node);
 
-	dataNode searchVal(double val);
+	int searchVal(double val);
 	void searchValHelper(dataNode& temp, double val, Node* node);
 
 
@@ -260,11 +260,15 @@ void RBTree::debug_printPreorder(Node* root) {
 	debug_printPreorder(root->right);
 }
 
-dataNode RBTree::searchVal(double val) {
+int id = 0;
+int RBTree::searchVal(double val) {
+	id = 0;
 	dataNode temp;
 	searchValHelper(temp, val, root);
-	return temp;
+	return id;
 }
+
+
 
 void RBTree::searchValHelper(dataNode& temp, double val, Node* node) {
 	//Change placeholder here
@@ -277,10 +281,18 @@ void RBTree::searchValHelper(dataNode& temp, double val, Node* node) {
 
 	if (temp.getPlaceholder() != -123456) {
 		return;
-	}else if (node->data.getPlaceholder() >= val) {
-		temp = node->data;
-		return;
 	}
+	else {
+		if (node->data.getPlaceholder() >= val) {
+			id++;
+			temp = node->data;
+			return;
+		}
+		else {
+			id++;
+		}
+	}
+
 
 	searchValHelper(temp, val, node->right);
 
