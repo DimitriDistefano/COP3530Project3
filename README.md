@@ -2,9 +2,11 @@
 Project 3 is an application that  
 
 ## Table of Contents
-*
+* Installation
 * Credits
 * License
+
+## Installation
 
 ## Credits
 * DimitriDistefano
