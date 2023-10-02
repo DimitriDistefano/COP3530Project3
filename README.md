@@ -2,10 +2,10 @@
 Project 3 is an application to provide a rough prediction of how many years until extinction based upon current Carbon Dioxide emissions from different countries.
 
 ## Table of Contents
-* Installation
-* Credits
-* Data Used
-* References
+- [Installation](#installation)
+- [Credits](#credits)
+- [Data Used](#Data Used)
+- [References](#References)
 
 ## Installation
 * Clone the repository to your local machine:
