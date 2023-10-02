@@ -9,9 +9,9 @@ Project 3 is an application to provide a rough prediction of how many years unti
 
 ## Installation
 * Clone the repository to your local machine:
-  git clone https://github.com/your-username/COP3530Project3.git
+**  git clone https://github.com/your-username/COP3530Project3.git
 * Change to the project directory:
-  cd main/main.cpp
+**  cd main/main.cpp
 * Execute Main.cpp
   
 
