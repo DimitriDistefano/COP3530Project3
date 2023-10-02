@@ -16,6 +16,7 @@ Project 3 is an application to provide a rough prediction of how many years unti
   
 
 ## Credits
+**Author**:
 * Dimitri Distefano
 * George Rauta
 
