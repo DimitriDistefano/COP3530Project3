@@ -1,13 +1,13 @@
 # COP3530Project3
 Project 3 is an application that  
 
-##Table of Contents
+## Table of Contents
 *
-*Credits
-*License
+* Credits
+* License
 
-##Credits
-*DimitriDistefano
-*GeorgeR227
+## Credits
+* DimitriDistefano
+* GeorgeR227
 
-##License
+## License
