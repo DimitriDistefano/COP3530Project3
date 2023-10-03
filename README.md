@@ -21,11 +21,11 @@ Project 3 is an application to provide a rough prediction of how many years unti
 * George Rauta
 
 ## Data
-* https://www.ucsusa.org/resources/each-countrys-share-co2-emissions
-* http://ww38.globalwarmingequation.info/
-* https://www.dreamstime.com/cute-boy-space-suit-standing-helmet-his-hands-kid-dreaming-becoming-astronaut-cartoon-style-vector-illustration-image196378050
+* [CO2 Emission by Country](https://www.ucsusa.org/resources/each-countrys-share-co2-emissions)
+* [Global Warming Equation](http://ww38.globalwarmingequation.info/)
+* [Space Suit](https://www.dreamstime.com/cute-boy-space-suit-standing-helmet-his-hands-kid-dreaming-becoming-astronaut-cartoon-style-vector-illustration-image196378050) image used in the application
 
 ## References
-* https://www.ucsusa.org/resources/each-countrys-share-co2-emissions
-* https://www.worldometers.info/world-population/population-by-country/
-* https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions
+* [CO2 Emission by Country](https://www.ucsusa.org/resources/each-countrys-share-co2-emissions)
+* [Populations by Country](https://www.worldometers.info/world-population/population-by-country/)
+* [List of Countrys' CO2 Emissions](https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions)
