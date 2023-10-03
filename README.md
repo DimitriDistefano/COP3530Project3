@@ -48,7 +48,8 @@ g++ -o <desired-out-filename> main.cpp
 ./main
 ```
 4. Once the application is running, there should be a working interface similar to below:
-  ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/6271ceac-2177-46f1-9be5-c0b21e4cdc7c)
+
+ ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/6271ceac-2177-46f1-9be5-c0b21e4cdc7c)
 
 
 ## Credits
