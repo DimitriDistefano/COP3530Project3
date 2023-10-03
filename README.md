@@ -2,10 +2,13 @@
 Project 3 is an application to provide a rough prediction of how many years until extinction based upon current Carbon Dioxide emissions from different countries.
 
 ## Table of Contents
+- [Description](#Description)
 - [Installation](#installation)
 - [Credits](#credits)
 - [Data Used](#Data)
 - [References](#References)
+
+## Description
 
 ## Installation
 * Clone the repository to your local machine:
@@ -17,8 +20,8 @@ Project 3 is an application to provide a rough prediction of how many years unti
 
 ## Credits
 **Author**:
-* Dimitri Distefano
-* George Rauta
+* [Dimitri Distefano](https://github.com/DimitriDistefano)
+* [George Rauta](https://github.com/GeorgeR227)
 
 ## Data Used
 * [CO2 Emission by Country](https://www.ucsusa.org/resources/each-countrys-share-co2-emissions)
