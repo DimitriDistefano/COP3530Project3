@@ -19,6 +19,7 @@ The key features of this project include:
   ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/e88eab43-3d18-4aa0-9f9d-809144cf8449)
 
 * **Country Specific data:** One of the functionalities allows users to see a country's CO2 emission within a specific month and year.
+
   ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/4bbaeef0-e604-40f0-951c-11422ca15aff)
 
 
