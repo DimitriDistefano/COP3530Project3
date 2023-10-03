@@ -16,7 +16,8 @@ Project 3 is an application to provide a rough prediction of how many years unti
 * Change to the project directory:
 **  cd main/main.cpp
 * Execute Main.cpp
-  
+  ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/6271ceac-2177-46f1-9be5-c0b21e4cdc7c)
+
 
 ## Credits
 **Author**:
