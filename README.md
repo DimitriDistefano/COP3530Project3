@@ -23,7 +23,7 @@ Project 3 is an application to provide a rough prediction of how many years unti
 ## Data
 * [CO2 Emission by Country](https://www.ucsusa.org/resources/each-countrys-share-co2-emissions)
 * [Global Warming Equation](http://ww38.globalwarmingequation.info/)
-* [Space Suit](https://www.dreamstime.com/cute-boy-space-suit-standing-helmet-his-hands-kid-dreaming-becoming-astronaut-cartoon-style-vector-illustration-image196378050) image used in the application
+* [Space Suit image used in the application](https://www.dreamstime.com/cute-boy-space-suit-standing-helmet-his-hands-kid-dreaming-becoming-astronaut-cartoon-style-vector-illustration-image196378050)
 
 ## References
 * [CO2 Emission by Country](https://www.ucsusa.org/resources/each-countrys-share-co2-emissions)
