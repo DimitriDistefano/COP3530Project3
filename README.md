@@ -1,6 +1,6 @@
 # COP3530Project3
 
-With increased carbon dioxide emissions, comes a rising concern in global warming and the approach of mass human extinction. Project 3 is an application aimed to provide a rough prediction of how many years until human extinction.
+With increased carbon dioxide emissions(CO2), comes a rising concern in global warming and the approach of mass human extinction. Project 3 is an application aimed to provide a rough prediction of how many years until human extinction based upon population size and CO2 emissions.
 
 ## Table of Contents 
 
@@ -12,13 +12,13 @@ With increased carbon dioxide emissions, comes a rising concern in global warmin
 
 ## Description
 
-Project 3, the Mass Extinction Calculator, provides an interface for users to see the years until extinction based upon current carbon dioxide emissions. The interface lays out the carbon dioxide emissions of the top 12 countries in the world with the ability for the user to increase emission percentage and population size. 
+Project 3, the Mass Extinction Calculator, provides an interface for users to see the years until extinction based upon current CO2 emissions. The interface lays out the CO2 emissions of the top 12 countries in the world with the ability for the user to increase emission percentage and population size. 
 
 The key features of this project include:
 * **Graphical Interface:** The interface allows users to see a visual representation displaying years until extinction and easily adjustable counters for emission and population size by country.
   ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/e88eab43-3d18-4aa0-9f9d-809144cf8449)
 
-* **Country Specific data:** One of the functionalities allows users to see a country's carbon dioxide emission within a specific month and year.
+* **Country Specific data:** One of the functionalities allows users to see a country's CO2 emission within a specific month and year.
   ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/4bbaeef0-e604-40f0-951c-11422ca15aff)
 
 
