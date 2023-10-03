@@ -20,7 +20,8 @@ The key features of this project include:
 
 
 * **Search Functionality:** The application incorporates a functionality for users to easily search the first date that the Earth has hit a desired temperature.
-  ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/946d00c5-6250-4c55-ab7e-431dd4cabdb2)
+  ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/79119d37-116e-4876-a469-0ca3a947e4b3)
+
 
 
 # Installation
