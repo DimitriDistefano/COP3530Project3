@@ -15,12 +15,11 @@ The key features of this project include:
 * **Graphical Interface:** The interface allows users to see a visual representation displaying years until extinction and easily adjustable counters for emission and population size by country.
   
 * **Country Specific data:** One of the functionalities allows users to see a country's carbon dioxide emission within a specific month and year.
-![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/4bbaeef0-e604-40f0-951c-11422ca15aff)
+  ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/4bbaeef0-e604-40f0-951c-11422ca15aff)
 
 
 * **Search Functionality:** The application incorporates a functionality for users to easily search the first date that the Earth has hit a desired temperature.
-
-![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/946d00c5-6250-4c55-ab7e-431dd4cabdb2)
+  ![image](https://github.com/wilfredogao/COP3530Project3/assets/44207973/946d00c5-6250-4c55-ab7e-431dd4cabdb2)
 
 
 # Installation
